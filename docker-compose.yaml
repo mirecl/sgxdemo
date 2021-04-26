@@ -1,0 +1,37 @@
+version: '2.2'
+services:
+    model:
+        image: model
+        container_name: model
+        build:
+            context: model/
+            dockerfile: Dockerfile
+        ports:
+            - 8080
+
+    service1:
+        image: service1
+        container_name: service1
+        build:
+            context: organization1/
+            dockerfile: Dockerfile
+        ports:
+            - 8080:8080
+
+    service2:
+        image: service2
+        container_name: service2
+        build:
+            context: organization2/
+            dockerfile: Dockerfile
+        ports:
+            - 8080
+
+    service3:
+        image: service3
+        container_name: service3
+        build:
+            context: organization3/
+            dockerfile: Dockerfile
+        ports:
+            - 8080

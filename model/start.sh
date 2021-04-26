@@ -1,3 +1,4 @@
+#!/bin/bash
 gunicorn \
     -w 4 \
     -b:8080 \
